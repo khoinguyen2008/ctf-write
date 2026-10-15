@@ -89,6 +89,27 @@ Level này yêu cầu đọc file readme để có thể lấy được password
 <img width="1674" height="535" alt="image" src="https://github.com/user-attachments/assets/03e1dc0f-eba2-4740-945c-a60a140c9000" />
 và pass của màn này là :KpsOfPkcP7i1FlIExk2QEjyt6dw8dxZI
 
+## LV 19 - 20
+Level này cho ta 1 file có tên là `bandit20-do`, file này có dạng setuid và ta được truyền `argument` vào để thực hiện lệnh.
+<img width="1546" height="419" alt="image" src="https://github.com/user-attachments/assets/546c0844-ecfa-4968-838e-62f49624b94c" />
+
+## solution
+
+Đối với level này, đơn giản mình chỉ cần truyền lệnh để thực hiện vào argument khi thực hiện file `bandit20-do`.
+
+Cụ thể: `./bandit20-do cat /etc/bandit_pass/bandit20`
+
+<img width="1297" height="182" alt="image" src="https://github.com/user-attachments/assets/16cd0fb1-daea-4349-8fcb-df39b8f9c998" />
+pass của màn này là : 4pIjcunZ0fK2vmp3IwfG8Vf7VhxD6pOA
+
+## LV 20 - 21
+
+
+
+
+
+
+
 
 
 
