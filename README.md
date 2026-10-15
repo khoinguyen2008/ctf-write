@@ -43,6 +43,7 @@ pass của màn này là : pbLYuZtTg4MgaqfJx8jbA9gKKGqM68A7
 cụ thể : `openssl s_client -connect localhost:30001` sau đó nhập mật khẩu của lv hiện tại vào
 <img width="1339" height="745" alt="image" src="https://github.com/user-attachments/assets/34fad7a0-b87b-47b7-8963-21c16c67f825" />
 <img width="516" height="214" alt="image" src="https://github.com/user-attachments/assets/2ffe9872-eb69-4b0a-a741-ca803559a605" />
+
 pass của màn này là : kS0Hf0u5HiXFwKMKFqXvPdOTNGGa0X8V
 
 
