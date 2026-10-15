@@ -69,6 +69,18 @@ và cuối cùng dùng lệnh `cat /etc/bandit_pass/bandit17` để lấy pass
 <img width="1818" height="957" alt="image" src="https://github.com/user-attachments/assets/f5364c74-14b9-44fa-bf30-633b8cd01e88" />
 
 pass của màn này là : pWXMAZoxGC8JmDMfmT5MGEsobMM3vnj2
+## LV 17 - 18
+trong LV này cho ta hai file đó là `passwords.new` và `passwords.old` và pass của lv tiếp theo nằm ở dòng khác biệt của hai file này
+<img width="1561" height="559" alt="image" src="https://github.com/user-attachments/assets/916f9f9f-7198-42da-94e9-b25255625a75" />
+## solution
+bài này mình dùng lệnh `diff` ( viết tắt của different trong tiếng anh) 
+cụ thể `diff passwords.new passwords.old`
+<img width="1389" height="222" alt="image" src="https://github.com/user-attachments/assets/d38e64b6-d7f7-4304-a383-9aa23eb2b148" />
+
+pass của màn này là :OQxXZjELndr90zuhOTDYBEomI0SZITXI
+
+
+
 
 
 
