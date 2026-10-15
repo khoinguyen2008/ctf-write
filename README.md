@@ -27,11 +27,24 @@ pass của màn này là: aaWecNkG4FhxJQxz07uiwzVP6bJiYS65
 <img width="1301" height="720" alt="image" src="https://github.com/user-attachments/assets/286fe719-6963-4a08-9dfc-e278cab2bba5" />
 
 ## solution
-*`nc` : dùng để gửi thông điệp tới địa chỉ nào đó
+*`nc` : dùng để tạo máy chủ, gửi/nhận thông điệp qua TCP/UDP
 
 để giải quyết bài này mình dùng lệnh `nc localhost 30000` và nhập mật khẩu của vl hiện tại
 <img width="701" height="189" alt="image" src="https://github.com/user-attachments/assets/e79be07b-6b8c-40a9-b5a0-b4e68b934a6e" />
 pass của màn này là : pbLYuZtTg4MgaqfJx8jbA9gKKGqM68A7
+
+## LV 15 - 16
+ở lv này đề bài yêu cầu kết nối với sever localhost ở port 30001 bằng giao thức SSL/TLS và nhập mật khẩu ở lv hiện tại
+<img width="1413" height="643" alt="image" src="https://github.com/user-attachments/assets/4581d759-a665-4c08-8af4-f4ce3fc31f5c" />
+## solution
+*`openssl` : dùng để mã hóa dữ liệu , giải mã dữ liệu , tạo và kiểm tra SSL/TLS kết nối
+*`s_client`: con command openssl dùng để thiết lập kết nối sever SSL/TLS
+ở lv này mình dùng câu lệnh `openssl s_client` để kết nối với localost ở port:30001
+cụ thể : `openssl s_client -connect localhost:30001` sau đó nhập mật khẩu của lv hiện tại vào
+<img width="1339" height="745" alt="image" src="https://github.com/user-attachments/assets/34fad7a0-b87b-47b7-8963-21c16c67f825" />
+<img width="516" height="214" alt="image" src="https://github.com/user-attachments/assets/2ffe9872-eb69-4b0a-a741-ca803559a605" />
+pass của màn này là : kS0Hf0u5HiXFwKMKFqXvPdOTNGGa0X8V
+
 
 
 
