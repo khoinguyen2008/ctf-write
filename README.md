@@ -38,6 +38,7 @@ pass của màn này là : pbLYuZtTg4MgaqfJx8jbA9gKKGqM68A7
 <img width="1413" height="643" alt="image" src="https://github.com/user-attachments/assets/4581d759-a665-4c08-8af4-f4ce3fc31f5c" />
 ## solution
 *`openssl` : dùng để mã hóa dữ liệu , giải mã dữ liệu , tạo và kiểm tra SSL/TLS kết nối
+
 *`s_client`: con command openssl dùng để thiết lập kết nối sever SSL/TLS
 ở lv này mình dùng câu lệnh `openssl s_client` để kết nối với localost ở port:30001
 cụ thể : `openssl s_client -connect localhost:30001` sau đó nhập mật khẩu của lv hiện tại vào
@@ -45,6 +46,33 @@ cụ thể : `openssl s_client -connect localhost:30001` sau đó nhập mật k
 <img width="516" height="214" alt="image" src="https://github.com/user-attachments/assets/2ffe9872-eb69-4b0a-a741-ca803559a605" />
 
 pass của màn này là : kS0Hf0u5HiXFwKMKFqXvPdOTNGGa0X8V
+
+## LV 16 - 17
+Level này yêu cầu ta kết nối vào localhost và 1 port nào đó nằm trong phạm vi từ 31000 đến 32000 và có SSL/TLS. Trong số các port đó, có duy nhất 1 port là cung cấp cho chúng ta thông tin về level tiếp theo, còn các port còn lại khi ta nhập password của level này thì nó sẽ in lại password đấy.
+<img width="1519" height="652" alt="image" src="https://github.com/user-attachments/assets/2d4805dd-8cb1-4a4c-b751-fd91171cc032" />
+
+## solution
+*`nmap`: dùng để scan như tìm host,tìm port,..
+*`ncat`: dùng để gửi dữ liệu qua TCP/UDP (hỗ trợ SSL/TLS)
+
+mình dùng lệnh `nmap` để scan các cổng đang hoạt động , dùng option `-p 31000-32000` để scan port trong phạm vi 31000-32000 , dùng thêm option `sV` để hiển thị chi tiết hơn
+<img width="1561" height="742" alt="image" src="https://github.com/user-attachments/assets/8c5d6a35-9162-4936-be48-872bb0208437" />
+
+sau khi dùng lệnh `nmap` thì có xuất hiện 2 cổng 31518 , 31790 có SSL thì mình lần lượt thử 2 cổng bằng lệnh `ncat --ssl localhost 31790` và thấy cổng 31790 cho ra khóa RSA
+<img width="1086" height="847" alt="image" src="https://github.com/user-attachments/assets/729c5b37-5307-4ac7-9688-5ba46fb86aa0" />
+sau đó copy lại khóa RSA và thoát ra khỏi màn hình chính bằng lệnh `exit` sau đó dùng lệnh `nano sshkey.private` dán khóa rsa 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9f5e4312-ff65-42d9-92fb-c4e5a32764b4" />
+sau đó cấp quyền bằng lệnh `chmod 700 sshkey.private` 
+<img width="990" height="331" alt="image" src="https://github.com/user-attachments/assets/c5896687-0630-4188-80a4-12c0004ebbe3" />
+sau đó dùng lệnh `ssh -i sshkey.private bandit17@bandit.labs.overthewire.org -p 2220` 
+và cuối cùng dùng lệnh `cat /etc/bandit_pass/bandit17` để lấy pass
+<img width="1818" height="957" alt="image" src="https://github.com/user-attachments/assets/f5364c74-14b9-44fa-bf30-633b8cd01e88" />
+
+pass của màn này là : pWXMAZoxGC8JmDMfmT5MGEsobMM3vnj2
+
+
+
+
 
 
 
