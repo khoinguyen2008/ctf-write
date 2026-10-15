@@ -79,6 +79,17 @@ cụ thể `diff passwords.new passwords.old`
 
 pass của màn này là :OQxXZjELndr90zuhOTDYBEomI0SZITXI
 
+## LV 18 - 19
+
+Level này yêu cầu đọc file readme để có thể lấy được password cho level tiếp theo. Tuy nhiên, khi ta kết nối vào level này thì không may file .bashrc bị lỗi và không thể kết nối vào trong và remote được.
+<img width="1507" height="477" alt="image" src="https://github.com/user-attachments/assets/dd8f0a7c-2f0f-4dd6-ae2c-0120aa3e61e6" />
+## solution
+
+ở bài này mình dùng lệnh `ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme` sau đó nhập mật khẩu vào
+<img width="1674" height="535" alt="image" src="https://github.com/user-attachments/assets/03e1dc0f-eba2-4740-945c-a60a140c9000" />
+và pass của màn này là :KpsOfPkcP7i1FlIExk2QEjyt6dw8dxZI
+
+
 
 
 
