@@ -116,6 +116,34 @@ Cụ thể: `echo -n '0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO' | nc -l localhost 2008 &
 
 pass của màn này là : bW9kBv5WC3P4yoDyf12LSdGuNz5ka6hY
 
+## LV 21 - 22
+Level này yêu cầu ta xem thử trong /etc/cron.d có lệnh nào đang được thực thi.
+
+<img width="1535" height="482" alt="image" src="https://github.com/user-attachments/assets/077b8849-2a2e-4077-87fb-ef042cb0f4ed" />
+
+## solution
+
+Đối với level này, đầu tiên mình sẽ xem thử trong etc/cron.d có những gì, và mình thấy có nhiều file cron và để ý thấy có file `cronjob_bandit22`. Khi mình xem thử bên trong thì có thấy cron này đang thực thi  `/usr/bin/cronjob_bandit22.sh.` Và mình lại xem thử bên trong file shell đó thì thấy nó lấy password của level tiếp theo được lưu trong `/etc/bandit_pass/bandit22` và truyền vào file `/tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv` và `chmod 644` tức là file đó mình có thể đọc được. Và mình chỉ cần đọc file đó là có thể xem được password cho level tiếp theo.
+<img width="1462" height="435" alt="image" src="https://github.com/user-attachments/assets/dee573c1-a05f-4463-9970-b15af602e539" />
+pass của màn này là: RYVux2rHEm9tiXHmLFzuR7Vhx6AZQMEz
+
+## LV 22 - 23
+Tương tự level trước, level này yêu cầu ta xem thử trong /etc/cron.d có lệnh nào đang được thực thi.
+
+<img width="1533" height="496" alt="image" src="https://github.com/user-attachments/assets/3a320410-8ba8-4980-a0dc-e83a540879e9" />
+
+## solution
+đối với bài này mình xem thử trong `/etc/cron.d/` có những gì và sau đó mình thấy file `cronjob_bandit23` . Mình xem thử bên trong thì thấy có file `/usr/bin/cronjob_bandit23.sh` Và mình lại xem thử bên trong file shell đó thì thấy nó lấy password của level tiếp theo được lưu trong `/etc/bandit_pass/$myname` và truyền vào file `/tmp/$mytarget`. Ta thấy `myname=$(whoami)` mà whoami trong trường hợp này là `bandit23`. Còn `mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)` mà ta đã biết được myname rồi nên mình sẽ thay myname thành `bandit23` để lấy mã `md5sum`. Sau đó chỉ cần in ra `/tmp/$mytarget` với mytarget thay bằng `md5sum` đó.
+<img width="1315" height="885" alt="image" src="https://github.com/user-attachments/assets/34ba4d39-5f8c-41f9-a44e-0df52df26721" />
+
+pass của màn này là : gKXDTAXnIz3OBxiPjRZ2uqutUlPZrBsw
+
+
+
+
+
+
+
 
 
 
