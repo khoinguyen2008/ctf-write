@@ -103,6 +103,20 @@ Cụ thể: `./bandit20-do cat /etc/bandit_pass/bandit20`
 pass của màn này là : 4pIjcunZ0fK2vmp3IwfG8Vf7VhxD6pOA
 
 ## LV 20 - 21
+Level này cho mình 1 file có dạng `setuid`, file đó nó kết nối tới localhost với port(argument) có thể lắng nghe. Khi nhập đúng password của level hiện tại nó sẽ gửi password của level tiếp theo.
+<img width="1543" height="546" alt="image" src="https://github.com/user-attachments/assets/59c013bc-04b4-4020-aefa-dba511d757b6" />
+
+## solution
+`echo` : dùng để in ra một kí tự
+ở bài này mình dùng lệnh `nc` và thêm option `l` để mở một port với local có thể nghe.Sau đó mình sẽ truyền arugment vào cho file setuid đó khi thực thi. Và cuối cùng là nhập password của level này để nhận được password của level tiếp theo.
+
+Cụ thể: `echo -n '0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO' | nc -l localhost 2008 &`
+
+<img width="1226" height="180" alt="image" src="https://github.com/user-attachments/assets/e151bceb-b719-46a1-9644-81493ec846fd" />
+
+pass của màn này là : bW9kBv5WC3P4yoDyf12LSdGuNz5ka6hY
+
+
 
 
 
